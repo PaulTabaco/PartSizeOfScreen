@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Hlw-r0-cop">
+            <objects>
+                <navigationController id="NRd-Pj-WgW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Il6-2t-gll">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kVb-O5-W6H"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tGm-yS-fSy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1681" y="401"/>
+        </scene>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainVC" customModule="PartSizeOfScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MiZ-S5-Adc">
+                                <rect key="frame" x="30" y="94" width="315" height="543"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1MH-6l-2O9">
+                                        <rect key="frame" x="107.5" y="75" width="100" height="30"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.46116879109999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="8FS-JJ-BlY"/>
+                                            <constraint firstAttribute="height" constant="30" id="ax9-AA-O8n"/>
+                                        </constraints>
+                                        <state key="normal" title="Load"/>
+                                        <connections>
+                                            <action selector="LoadBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="agn-rC-t7V"/>
+                                            <segue destination="p01-JR-E5z" kind="popoverPresentation" animates="NO" popoverAnchorView="1MH-6l-2O9" id="gU1-xS-me2">
+                                                <popoverArrowDirection key="popoverArrowDirection" down="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.52156862749999999" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="1MH-6l-2O9" firstAttribute="top" secondItem="MiZ-S5-Adc" secondAttribute="top" constant="75" id="BBj-Qi-3hW"/>
+                                    <constraint firstAttribute="trailing" secondItem="1MH-6l-2O9" secondAttribute="trailing" constant="154" id="jgL-J1-xLx"/>
+                                    <constraint firstItem="1MH-6l-2O9" firstAttribute="centerX" secondItem="MiZ-S5-Adc" secondAttribute="centerX" id="kcO-Gl-fXW"/>
+                                    <constraint firstItem="1MH-6l-2O9" firstAttribute="leading" secondItem="MiZ-S5-Adc" secondAttribute="leading" constant="154" id="uye-qM-vTj"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jgL-J1-xLx"/>
+                                        <exclude reference="uye-qM-vTj"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MiZ-S5-Adc" secondAttribute="bottom" constant="30" id="AQT-39-f4F"/>
+                            <constraint firstItem="MiZ-S5-Adc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="JH2-81-Qux"/>
+                            <constraint firstAttribute="trailing" secondItem="MiZ-S5-Adc" secondAttribute="trailing" constant="30" id="SDz-CY-vYy"/>
+                            <constraint firstItem="MiZ-S5-Adc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="Thb-je-IJB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="STn-De-WUv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-780" y="401"/>
+        </scene>
+        <!--PartVC-->
+        <scene sceneID="7dQ-uU-vjs">
+            <objects>
+                <viewController storyboardIdentifier="partVC" autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" modalPresentationStyle="formSheet" useStoryboardIdentifierAsRestorationIdentifier="YES" id="p01-JR-E5z" customClass="partVC" customModule="PartSizeOfScreen" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9rZ-vk-KCz"/>
+                        <viewControllerLayoutGuide type="bottom" id="KrD-sA-wzH"/>
+                    </layoutGuides>
+                    <view key="view" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="bottom" placeholderIntrinsicWidth="150" placeholderIntrinsicHeight="200" id="Wsz-s9-cIE">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kM-HC-eR1">
+                                <rect key="frame" x="25" y="46" width="100" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.46116879109999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="elC-UV-F1I"/>
+                                    <constraint firstAttribute="height" constant="30" id="wrP-ZE-LwK"/>
+                                </constraints>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="BackBtn:" destination="p01-JR-E5z" eventType="touchUpInside" id="jaB-1Z-752"/>
+                                    <action selector="LoadBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P1T-uC-oov"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2kM-HC-eR1" firstAttribute="top" secondItem="9rZ-vk-KCz" secondAttribute="bottom" constant="26" id="Boc-hm-tiQ"/>
+                            <constraint firstItem="2kM-HC-eR1" firstAttribute="centerX" secondItem="Wsz-s9-cIE" secondAttribute="centerX" id="YAM-SR-icQ"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="150" height="200"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="150" height="200"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N6A-3c-OBF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-211" y="493"/>
+        </scene>
+    </scenes>
+</document>
